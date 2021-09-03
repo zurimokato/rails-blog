@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Articles</h1>
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <% @articles.each do |article| %>
+                <li class="list-group-item">
+                    id <%= article.id%>
+                    <a href="/articles/<%= article.id %>">
+                        <%= article.title %>
+                    </a>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+
+    <%= link_to  "Nuevo", "/articles/new", class: "btn btn-primary btn-lg bton-new" %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+    <%= form_with(model:@article, local: true) do |form|%>
+        <div  class="input-group mb-3">
+            <%= form.label :title, "Ingresa el titulo de tu Articulo" , class: "input-group-text" %>
+            <%= form.text_field :title, class: "form-control" %>
+        </div>
+        <div>
+            <%= form.submit "Enviar", class: "btn btn-primary btn-lg" %>
+        </div>
+    <%end%>
+</div>
